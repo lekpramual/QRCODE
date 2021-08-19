@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Reader</title>
+</head>
+
+<body>
+    <h1>Hello World!</h1>
+    <button id="btnQR" onClick="window.location='https://line.me/R/nv/QRCodeReader'">Open QR Code Reader</button>
+
+    <script src=" https://static.line-scdn.net/liff/edge/versions/2.4.0/sdk.js"></script>
+
+    <script>
+        async function main() {
+            await liff.init({ liffId: "1656331237-XGkQjqOl" })
+            const queryString = decodeURIComponent(window.location.search)
+            const params = new URLSearchParams(queryString)
+            if (params.get("param") !== null) {
+                document.getElementById("h1")[0].innerHTML = params.get("param")
+            }
+        }
+        main();
+    </script>
+
+</body>
+
+</html>
