@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
 
   title = 'ng-line-liff';
   messages: string;
-  userProfile!: any | undefined;
+  userProfile: any;
 
   // profile: UnPromise<ReturnType<typeof liff.getProfile>> | undefined;
 
