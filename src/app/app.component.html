@@ -1,12 +1,7 @@
 <h5>LIFF is running in : {{title}}</h5>
 <div class="p-grid">
   <div class="p-col">
-    <div class="box">displayName:{{userProfile?.displayName}}</div>
+    <div class="box">displayName:{{userProfile | json}}</div>
   </div>
-  <div class="p-col">
-    <div class="box">userId:{{userProfile?.userId}}</div>
-  </div>
-  <div class="p-col">
-    <div class="box">pictureUrl:{{userProfile?.pictureUrl}}</div>
-  </div>
+
 </div>
